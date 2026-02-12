@@ -6,9 +6,15 @@ terraform {
 
     }
   }
+  backend "azurerm" {
+    resource_group_name  = "BackEndResourceGroupName"
+    storage_account_name = "StorageAccountName"
+    container_name       = "ContainerName"
+    key                  = "terraform.tfstate"
+  }
 }
 
 provider "azurerm" {
-  features{}
-  subscription_id = "672b7821-c844-4e09-9a36-15f50e864d0b"
+  features {}
+  subscription_id = "abc-abc-abc-abc"
 }

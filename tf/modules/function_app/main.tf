@@ -4,10 +4,10 @@ resource "azurerm_resource_group" "rg" {
 }
 
 resource "azurerm_storage_account" "st" {
-  name = "st${var.environment}${var.instance}${var.location_abbr}${format("%02d", var.index)}"
-  resource_group_name = azurerm_resource_group.rg.name
-  location = azurerm_resource_group.rg.location
-  account_tier = var.account_tier
+  name                     = "st${var.environment}${var.instance}${var.location_abbr}${format("%02d", var.index)}"
+  resource_group_name      = azurerm_resource_group.rg.name
+  location                 = azurerm_resource_group.rg.location
+  account_tier             = var.account_tier
   account_replication_type = var.account_replication_type
 }
 
@@ -24,7 +24,7 @@ resource "azurerm_linux_function_app" "example" {
   resource_group_name = azurerm_resource_group.rg.name
   location            = azurerm_resource_group.rg.location
 
-  service_plan_id = azurerm_service_plan.sp.id
+  service_plan_id            = azurerm_service_plan.sp.id
   storage_account_name       = azurerm_storage_account.st.name
   storage_account_access_key = azurerm_storage_account.st.primary_access_key
 

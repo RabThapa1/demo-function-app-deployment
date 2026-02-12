@@ -33,6 +33,6 @@ variable "sku_name" {
   type        = string
 }
 
-variable "account_tier"{}
+variable "account_tier" {}
 
 variable "account_replication_type" {}
