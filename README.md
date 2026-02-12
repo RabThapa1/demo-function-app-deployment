@@ -5,9 +5,9 @@ This repository demonstrates a simple end-to-end **Azure Function App deployment
 ---
 
 ## Repository Structure
--**app**: Contains Sample python Azure Function with basic logic.
--**tf**: Contains Terraform configuration to deploy Storage Account, App Service Plan and Azure Function App. 
--**workflows**: Contains Yaml pipeline to deploy IaC and deploy python script to Azure Function App
+- **app**: Contains Sample python Azure Function with basic logic.
+- **tf**: Contains Terraform configuration to deploy Storage Account, App Service Plan and Azure Function App. 
+- **workflows**: Contains Yaml pipeline to deploy IaC and deploy python script to Azure Function App
 
 ## Design Consideration
 - **Reusable Module** : A single terraform module provisions **Storage Account**, **App Service Plan** and **Azure Function App**. This module creates a template that can be used to deploy mutiple instances and across various environments. 
