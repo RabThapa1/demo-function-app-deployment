@@ -145,10 +145,6 @@ __azurite_db*__.json
 *.tfstate.backup
 *.tfstate.lock.info
 
-# 3. Variable files (Often contain secrets)
-*.tfvars
-*.tfvars.json
-
 # 4. Crash logs
 crash.log
 
