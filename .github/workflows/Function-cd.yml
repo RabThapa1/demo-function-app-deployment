@@ -14,6 +14,11 @@ jobs:
   - name: 'Checkout GitHub Action'
     uses: actions/checkout@v3
 
+  - name: Debug app name
+    run: echo "${{ vars.AZURE_FUNCTIONAPP_NAME }}"
+    run: echo "${{ vars.PYTHON_VERSION }}"
+    run: echo "${{ vars.AZURE_FUNCTIONAPP_PACKAGE_PATH }}"
+
   - name: Setup Python ${{ env.PYTHON_VERSION }} Environment
     uses: actions/setup-python@v4
     with:
