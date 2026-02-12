@@ -1,4 +1,4 @@
-Name: Terraform CD 
+name: Terraform CD 
 
 on:
  push:
